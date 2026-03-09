@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SAMANTHA GANDA</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0a0a0a;
+    font-family:Arial;
+}
+
+/* Neon Button */
+.love-btn{
+    padding:18px 40px;
+    font-size:22px;
+    color:#ff9bd2;
+    background:transparent;
+    border:2px solid #ff4fa3;
+    border-radius:40px;
+    cursor:pointer;
+    text-transform:uppercase;
+    letter-spacing:3px;
+
+    box-shadow:
+    0 0 10px #ff4fa3,
+    0 0 20px #ff4fa3,
+    0 0 40px #ff4fa3;
+
+    transition:0.3s;
+    animation:heartbeat 1.5s infinite;
+}
+
+.love-btn:hover{
+    color:white;
+    background:#ff4fa3;
+
+    box-shadow:
+    0 0 20px #ff4fa3,
+    0 0 40px #ff4fa3,
+    0 0 80px #ff4fa3;
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.05);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+#message{
+    position:absolute;
+    bottom:120px;
+    color:#ff9bd2;
+    font-size:22px;
+    text-shadow:0 0 10px #ff4fa3;
+}
+</style>
+
+</head>
+<body>
+
+<div id="message"></div>
+
+<button class="love-btn" onclick="showLove()">
+PINDUTIN MOKO HONEY
+</button>
+
+<script>
+function showLove(){
+    document.getElementById("message").innerHTML = "I love you so much ❤️";
+
+    setTimeout(function(){
+        window.location.href = "sample.html";
+    },2000);
+}
+</script>
+
+</body>
+</html>
